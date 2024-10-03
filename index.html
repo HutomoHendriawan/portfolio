@@ -1,0 +1,1267 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- AOS Start -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- AOS End -->
+
+    <!-- Tailwind CSS -->
+    <link href="src/output.css" rel="stylesheet" />
+
+    <!-- Magnific Popup Css cdn Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/magnific-popup.min.css"
+      integrity="sha512-lvaVbvmbHhG8cmfivxLRhemYlTT60Ly9Cc35USrpi8/m+Lf/f/T8x9kEIQq47cRj1VQIFuxTxxCcvqiQeQSHjQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <!-- Favicon -->
+    <!-- <link rel="shortcut icon" href=""> -->
+
+    <title>Portfolio | Tailwindcss</title>
+
+    <!-- On page load or when changing themes, best to add inline in `head` to avoid FOUC -->
+    <script>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+
+    <!-- EmailJS -->
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: 'GlpjXQiVWBkYqMkYy',
+        });
+      })();
+    </script> -->
+  </head>
+
+  <body class="font-exo bg-light1 dark:bg-dark1">
+    <!-- Header Start -->
+    <header class="absolute left-0 top-0 z-10 flex w-full items-center bg-transparent">
+      <div class="container">
+        <div class="relative flex items-center justify-between">
+          <!-- Logo Start -->
+          <div class="px-4">
+            <a href="#home" class="block py-6 text-lg font-bold text-light3 dark:text-dark3">HUTOMO HENDRIAWAN</a>
+          </div>
+          <!-- Logo End -->
+          <div class="flex items-center px-4">
+            <!-- Hamburger Button Start -->
+            <button id="hamburger" name="hamburger" type="button" class="absolute right-4 block lg:hidden">
+              <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
+              <span class="hamburger-line transition duration-300 ease-in-out"></span>
+              <span class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
+            </button>
+            <!-- Hamburger Button End -->
+
+            <nav
+              id="nav-menu"
+              class="absolute hidden right-4 top-full w-full max-w-[250px] rounded-lg bg-light1 py-5 shadow-sm shadow-dark2 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none dark:bg-dark1 dark:shadow-sm dark:shadow-light2 dark:lg:shadow-none dark:lg:bg-transparent"
+            >
+              <ul class="block lg:gap-x-4 lg:gap-y-8 lg:flex">
+                <li class="group">
+                  <a href="#about">About</a>
+                </li>
+                <li class="group">
+                  <a href="#experience">Experience</a>
+                </li>
+                <li class="group">
+                  <a href="#skills">Skills</a>
+                </li>
+                <li class="group">
+                  <a href="#projects">Projects</a>
+                </li>
+                <li class="group">
+                  <a href="#contact">Contact</a>
+                </li>
+                <li class="dark-mode flex mx-11 lg:mx-0">
+                  <label class="w-10 h-10 rounded-[50%] cursor-pointer flex justify-center items-center">
+                    <input type="checkbox" class="input-moon absolute opacity-0" />
+                    <ion-icon name="moon" class="moon absolute text-[1.5em] text-[#D8D2C9]"></ion-icon>
+                    <ion-icon name="sunny" class="sun"></ion-icon>
+                    <span class="toggle"></span>
+                    <span class="animateBG"></span>
+                  </label>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <main>
+      <div class="content">
+        <!-- Hero Section Start -->
+        <article id="home" class="pt-36 lg:pt-48 h-screen">
+          <div class="container">
+            <div class="w-full px-4">
+              <div class="mx-auto max-w-lg text-center">
+                <h1 id="myText" class="text-3xl font-[750] text-opacity-80 text-light3 mb-3 dark:text-dark3 dark:text-opacity-80 md:text-4xl">Hi I'm</h1>
+                <h2 class="text-4xl mb-5 font-black text-dark1 dark:text-light1 md:text-5xl">A Digital Marketer</h2>
+                <p class="max-w-xl text-base font-medium text-dark1 text-opacity-80 dark:text-light1 dark:text-opacity-80 mb-8">
+                  I'm a Digital Marketer who specialize on <br />
+                  Social Media Marketing and Search Engine Marketing
+                </p>
+
+                <a
+                  href="#contact"
+                  class="py-[0.8rem] px-10 border-x-[3px] border-y-[3px] border-solid border-transparent rounded-full mt-4 bg-dark1 dark:bg-light1 text-base font-bold text-light1 dark:text-dark1 cursor-pointer transition-all ease-in hover:border-x-[3px] hover:border-solid hover:border-dark1 dark:hover:border-light1 hover:bg-transparent dark:hover:bg-transparent hover:text-dark1 dark:hover:text-light1"
+                  >CONTACT ME</a
+                >
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- Hero Section End -->
+
+        <!-- About Section Start -->
+        <article id="about" class="pt-24 pb-8">
+          <div class="container">
+            <div class="flex flex-wrap flex-row px-4">
+              <div class="w-full px-4 lg:w-[50%]">
+                <h4 class="text-lg font-medium uppercase text-dark1 text-opacity-80 dark:text-light1 dark:text-opacity-80">Introduction</h4>
+                <h2 class="mb-5 max-w-md text-3xl font-extrabold text-dark1 lg:text-4xl dark:text-light1">Overwiew.</h2>
+                <p class="max-w-xl text-base font-medium text-dark1 text-opacity-80 lg:text-lg dark:text-light1 dark:text-opacity-80">
+                  I began my career in 2016 when I joined the industrial practice program at Yamaha Baros Jaya in Cimahi. From 2016 to 2018, I gained experience in physical work, such as mechanical
+                  engineering and warehousing. From 2019 until now, I have gained experience in digital skills, such as digital advertising/digital marketing, administration, in various industries.
+                  Currently, I am learning programming languages and working as a freelance digital marketing specialist
+                </p>
+              </div>
+
+              <div class="w-full px-4 relative hover:rounded-lg mt-10 lg:w-[50%] lg:mt-0">
+                <img
+                  src="src/img/Endik-removebg-preview.png"
+                  alt="Endik"
+                  class="mx-auto relative z-10 px-5 py-5 rounded-lg shadow hover:shadow-none dark:shadow-light2 shadow-dark2 hover:border hover:border-solid dark:hover:border-light2 hover:border-dark2 lg:w-[80%]"
+                />
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- About Section End -->
+
+        <!-- Experience Section Start -->
+        <article id="experience" class="pt-24 pb-8">
+          <div class="container">
+            <div class="w-full px-4">
+              <div class="mx-auto mb-16 px-4">
+                <h4 class="text-lg font-medium uppercase text-dark1 text-opacity-80 dark:text-light1 dark:text-opacity-80">WHAT I HAVE DONE SO FAR</h4>
+                <h2 class="mb-5 max-w-md text-3xl font-extrabold text-dark1 lg:text-4xl dark:text-light1">Work Experience.</h2>
+              </div>
+
+              <!-- Timeline start -->
+              <div class="timeline relative max-w-[1200px] my-[100px] mx-auto flex flex-col">
+                <!-- Yamaha Baros Jaya -->
+                <div
+                  class="container-timeline flex flex-col items-stretch py-[10px] relative w-[50%] lg:px-[50px] sm:w-full before:content-[''] before:bg-light2 before:dark:bg-dark2 before:w-[70%] before:lg:w-[45%] before:sm:w-[50%] before:h-[4px] before:left-10 before:sm:left-0 before:lg:left-20 before:absolute before:top-12 before:lg:top-[30%] before:translate-y-1/2"
+                >
+                  <img
+                    src="src/img/Experience/Yamaha.jpg"
+                    alt="Yamaha Baros Jaya"
+                    class="absolute w-10 rounded-[50%] border-solid border-light2 dark:border-dark2 border-4 top-8 z-10 lg:w-20 self-center"
+                  />
+                  <p class="absolute text-base lg:text-lg font-bold top-[38px] left-[55%] text-dark1 text-opacity-50 dark:text-light1 dark:text-opacity-50 sm:block hidden z-30 lg:top-[25%]">
+                    Apr 2016 - Jun 2016
+                  </p>
+
+                  <div class="text-box py-5 px-[30px] relative bg-light2 dark:bg-dark2 rounded-md sm:w-[40%] sm:self-start">
+                    <h5 class="font-bold -mb-[6px] sm:-mb-0 text-base lg:text-lg text-dark2 dark:text-light2 whitespace-nowrap">CV Yamaha Baros Jaya</h5>
+                    <small class="inline-block mb-4 text-dark1 dark:text-light1 sm:hidden">Apr 2016 - Jun 2016</small>
+                    <h6 class="font-extrabold text-sm lg:text-base text-dark1 dark:text-light1 mb-1">Mechanic (Internship)</h6>
+                    <ul class="list-disc mx-4 text-xs text-opacity-80 dark:text-opacity-80 lg:text-sm font-semibold text-dark1 dark:text-light1 sm:mt-4">
+                      <li class="group py-1">Organizing goods and maintaining warehouse environment</li>
+                      <li class="group py-1">Manage orders and general administration task</li>
+                      <li class="group py-1">Service and tunning-up motorcycle</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Gramedia -->
+                <div
+                  class="container-timeline flex flex-col items-stretch py-[10px] relative w-[50%] lg:px-[50px] sm:w-full before:content-[''] before:bg-light2 before:dark:bg-dark2 before:w-[70%] before:lg:w-[45%] before:sm:w-[90%] before:h-[4px] before:left-10 before:sm:left-1/2 before:absolute before:top-12 before:lg:top-[34%] before:translate-y-1/2"
+                >
+                  <img
+                    src="src/img/Experience/Kompas.jpg"
+                    alt="Kompas Gramedia"
+                    class="absolute w-10 rounded-[50%] border-solid border-light2 dark:border-dark2 border-4 top-8 z-10 lg:w-20 self-center"
+                  />
+                  <p class="absolute text-base font-bold top-[38px] right-[55%] text-dark1 text-opacity-50 dark:text-light1 dark:text-opacity-50 sm:block hidden z-30 lg:top-[60px]">
+                    Jun 2017 - Jun 2018
+                  </p>
+
+                  <div class="text-box py-5 px-[30px] relative bg-light2 dark:bg-dark2 rounded-md sm:w-[40%] sm:self-end">
+                    <h5 class="font-bold -mb-[6px] sm:-mb-0 text-base lg:text-lg text-dark2 dark:text-light2 whitespace-nowrap">PT Gramedia Printing</h5>
+                    <small class="inline-block mb-4 text-dark1 dark:text-light1 sm:hidden">Jun 2017 - Jun 2018</small>
+                    <h6 class="font-extrabold text-sm lg:text-base text-dark1 dark:text-light1 mb-1">Production Operator</h6>
+                    <ul class="list-disc mx-4 text-xs text-opacity-80 dark:text-opacity-80 lg:text-sm font-semibold text-dark1 dark:text-light1 sm:mt-4">
+                      <li class="group py-1">Running production machine to producing materials into books</li>
+                      <li class="group py-1">Makesure the machine keep clean</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Freelance -->
+                <div
+                  class="container-timeline flex flex-col items-stretch py-[10px] relative w-[50%] lg:px-[50px] sm:w-full before:content-[''] before:bg-light2 before:dark:bg-dark2 before:w-[70%] before:lg:w-[45%] before:sm:w-[50%] before:h-[4px] before:left-10 before:sm:left-0 before:lg:left-20 before:absolute before:top-12 before:lg:top-[38%] before:translate-y-1/2"
+                >
+                  <img
+                    src="src/img/Experience/laptop-and-hot-coffee-cup-svgrepo-com.png"
+                    alt="Freelance Digital Marketer"
+                    class="absolute w-10 rounded-[50%] border-solid border-light2 dark:border-dark2 border-4 top-8 z-10 lg:w-20 self-center"
+                  />
+                  <p class="absolute text-base lg:text-lg font-bold top-[38px] left-[55%] text-dark1 text-opacity-50 dark:text-light1 dark:text-opacity-50 sm:block hidden z-30 lg:top-[60px]">
+                    Aug 2019 - Nov 2020
+                  </p>
+
+                  <div class="text-box py-5 px-[30px] relative bg-light2 dark:bg-dark2 rounded-md sm:w-[40%] sm:self-start">
+                    <h5 class="font-bold -mb-[6px] sm:-mb-0 text-base lg:text-lg text-dark2 dark:text-light2 whitespace-nowrap">Freelance</h5>
+                    <small class="inline-block mb-4 text-dark1 dark:text-light1 sm:hidden">Aug 2019 - Nov 2020</small>
+                    <h6 class="font-extrabold text-sm lg:text-base text-dark1 dark:text-light1 mb-1">Digital Marketer</h6>
+                    <ul class="list-disc mx-4 text-xs text-opacity-80 dark:text-opacity-80 lg:text-sm font-semibold text-dark1 dark:text-light1 sm:mt-4">
+                      <li class="group py-1">Marketing products on the Meta platform</li>
+                      <li class="group py-1">Assisting potential buyers with order processing</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- CV Alrasyid Naturindo -->
+                <div
+                  class="container-timeline flex flex-col items-stretch py-[10px] relative w-[50%] lg:px-[50px] sm:w-full before:content-[''] before:bg-light2 before:dark:bg-dark2 before:w-[70%] before:lg:w-[45%] before:sm:w-[90%] before:h-[4px] before:left-10 before:sm:left-1/2 before:absolute before:top-12 before:lg:top-[24%] before:translate-y-1/2"
+                >
+                  <img
+                    src="src/img/Experience/Alrasyid.jpg"
+                    alt="CV Alrasyid Naturindo"
+                    class="absolute w-10 rounded-[50%] border-solid border-light2 dark:border-dark2 border-4 top-8 z-10 lg:w-20 self-center"
+                  />
+                  <p class="absolute text-base font-bold top-[38px] right-[55%] text-dark1 text-opacity-50 dark:text-light1 dark:text-opacity-50 sm:block hidden z-30 lg:top-[60px]">
+                    Dec 2021 - Jan 2022
+                  </p>
+
+                  <div class="text-box py-5 px-[30px] relative bg-light2 dark:bg-dark2 rounded-md sm:w-[40%] sm:self-end">
+                    <h5 class="font-bold -mb-[6px] sm:-mb-0 text-base lg:text-lg text-dark2 dark:text-light2 whitespace-nowrap">CV Alrasyid Naturindo</h5>
+                    <small class="inline-block mb-4 text-dark1 dark:text-light1 sm:hidden">Dec 2021 - Jan 2022</small>
+                    <h6 class="font-extrabold text-sm lg:text-base text-dark1 dark:text-light1 mb-1">Digital Marketer (On Job Training)</h6>
+                    <ul class="list-disc mx-4 text-xs text-opacity-80 dark:text-opacity-80 lg:text-sm font-semibold text-dark1 dark:text-light1 sm:mt-4">
+                      <li class="group py-1">Design and execute digital marketing strategies across multiple platforms</li>
+                      <li class="group py-1">Conduct data analysis to evaluate the effectiveness of digital marketing</li>
+                      <li class="group py-1">Conduct target audience research</li>
+                      <li class="group py-1">Set-up ad accounts and ad account pixels</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- CV Edukasi Prima Indonesia -->
+                <div
+                  class="container-timeline flex flex-col items-stretch py-[10px] relative w-[50%] lg:px-[50px] sm:w-full before:content-[''] before:bg-light2 before:dark:bg-dark2 before:w-[70%] before:lg:w-[45%] before:sm:w-[50%] before:h-[4px] before:left-10 before:sm:left-0 before:lg:left-20 before:absolute before:top-12 before:lg:top-[19%] before:translate-y-1/2"
+                >
+                  <img
+                    src="src/img/Experience/Matrix.jpg"
+                    alt="CV Edukasi Prima Indonesia"
+                    class="absolute w-10 rounded-[50%] border-solid border-light2 dark:border-dark2 border-4 top-8 z-10 lg:w-20 self-center"
+                  />
+                  <p class="absolute text-base lg:text-lg font-bold top-[38px] left-[55%] text-dark1 text-opacity-50 dark:text-light1 dark:text-opacity-50 sm:block hidden z-30 lg:top-[60px]">
+                    Mar 2022 - Jul 2022
+                  </p>
+
+                  <div class="text-box py-5 px-[30px] relative bg-light2 dark:bg-dark2 rounded-md sm:w-[40%] sm:self-start">
+                    <h5 class="font-bold -mb-[6px] sm:-mb-0 text-base sm:leading-4 lg:text-lg text-dark2 dark:text-light2">CV Edukasi Prima Indonesia</h5>
+                    <small class="inline-block mb-4 text-dark1 dark:text-light1 sm:hidden">Mar 2022 - Jul 2022 </small>
+                    <h6 class="font-extrabold text-sm sm:leading-6 lg:text-base text-dark1 dark:text-light1 mb-1">Digital Marketer</h6>
+                    <ul class="list-disc mx-4 text-xs text-opacity-80 dark:text-opacity-80 lg:text-sm font-semibold text-dark1 dark:text-light1 sm:mt-4">
+                      <li class="group py-1">Design and execute digital marketing strategies across multiple platforms</li>
+                      <li class="group py-1">Perform data analysis to evaluate the effectiveness of digital marketing</li>
+                      <li class="group py-1">Create reports</li>
+                      <li class="group py-1">Manage and optimize SEM</li>
+                      <li class="group py-1">Conduct keyword and target audience research</li>
+                      <li class="group py-1">Manage ad accounts, ad account pixels, Google Tag Manager, and Google Analytics</li>
+                      <li class="group py-1">Manage database for remarketing purposes</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- PT Afriwinsyah Cipta Sedaya -->
+                <div
+                  class="container-timeline flex flex-col items-stretch py-[10px] relative w-[50%] lg:px-[50px] sm:w-full before:content-[''] before:bg-light2 before:dark:bg-dark2 before:w-[70%] before:lg:w-[45%] before:sm:w-[90%] before:h-[4px] before:left-10 before:sm:left-1/2 before:absolute before:top-12 before:lg:top-[17.5%] before:translate-y-1/2"
+                >
+                  <img
+                    src="src/img/Experience/Tufine.jpg"
+                    alt="PT Afriwinsyah Cipta Sedaya"
+                    class="absolute w-10 rounded-[50%] border-solid border-light2 dark:border-dark2 border-4 top-8 z-10 lg:w-20 self-center"
+                  />
+                  <p class="absolute text-base font-bold top-[38px] right-[55%] text-dark1 text-opacity-50 dark:text-light1 dark:text-opacity-50 sm:block hidden z-30 lg:top-[60px]">
+                    Aug 2022 - Jan 2023
+                  </p>
+
+                  <div class="text-box py-5 px-[30px] relative bg-light2 dark:bg-dark2 rounded-md sm:w-[40%] sm:self-end">
+                    <h5 class="font-bold -mb-[6px] sm:-mb-0 text-base sm:leading-4 lg:text-lg text-dark2 dark:text-light2">PT Afriwinsyah Cipta Sedaya</h5>
+                    <small class="inline-block mb-4 text-dark1 dark:text-light1 sm:hidden">Aug 2022 - Jan 2023</small>
+                    <h6 class="font-extrabold text-sm sm:leading-6 lg:text-base text-dark1 dark:text-light1 mb-1">Digital Marketer</h6>
+                    <ul class="list-disc mx-4 text-xs text-opacity-80 dark:text-opacity-80 lg:text-sm font-semibold text-dark1 dark:text-light1 sm:mt-4">
+                      <li class="group py-1">Design and execute digital marketing strategies across multiple platforms</li>
+                      <li class="group py-1">Perform data analysis to evaluate the effectiveness of digital marketing</li>
+                      <li class="group py-1">Create reports</li>
+                      <li class="group py-1">Manage and optimize websites, SEO and SEM</li>
+                      <li class="group py-1">Conduct keyword and target audience research</li>
+                      <li class="group py-1">Manage ad accounts, ad account pixels, Google Tag Manager and Google Analytics</li>
+                      <li class="group py-1">Manage database for remarketing purposes</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- PT Rancang Resto Indonesia -->
+                <div
+                  class="container-timeline flex flex-col items-stretch py-[10px] relative w-[50%] lg:px-[50px] sm:w-full before:content-[''] before:bg-light2 before:dark:bg-dark2 before:w-[70%] before:lg:w-[45%] before:sm:w-[50%] before:h-[4px] before:left-10 before:sm:left-0 before:lg:left-20 before:absolute before:top-12 before:lg:top-[20%] before:translate-y-1/2"
+                >
+                  <img
+                    src="src/img/Experience/Upsight.jpg"
+                    alt="PT Rancang Resto Indonesia"
+                    class="absolute w-10 rounded-[50%] border-solid border-light2 dark:border-dark2 border-4 top-8 z-10 lg:w-20 self-center"
+                  />
+                  <p class="absolute text-base lg:text-lg font-bold top-[38px] left-[55%] text-dark1 text-opacity-50 dark:text-light1 dark:text-opacity-50 sm:block hidden z-30 lg:top-[60px]">
+                    Okt 2023 - May 2024
+                  </p>
+
+                  <div class="text-box py-5 px-[30px] relative bg-light2 dark:bg-dark2 rounded-md sm:w-[40%] sm:self-start">
+                    <h5 class="font-bold -mb-[6px] sm:-mb-0 text-base sm:leading-4 lg:text-lg text-dark2 dark:text-light2">PT Rancang Resto Indonesia</h5>
+                    <small class="inline-block mb-4 text-dark1 dark:text-light1 sm:hidden">Okt 2023 - May 2024</small>
+                    <h6 class="font-extrabold text-sm sm:leading-6 lg:text-base text-dark1 dark:text-light1 mb-1">Digital Marketer</h6>
+                    <ul class="list-disc mx-4 text-xs text-opacity-80 dark:text-opacity-80 lg:text-sm font-semibold text-dark1 dark:text-light1 sm:mt-4">
+                      <li class="group py-1">Design and execute digital marketing strategies across multiple platforms</li>
+                      <li class="group py-1">Conduct data analysis to evaluate the effectiveness of digital marketing</li>
+                      <li class="group py-1">Manage and optimize websites, SEO and SEM</li>
+                      <li class="group py-1">Conduct keyword and target audience research</li>
+                      <li class="group py-1">Manage ad accounts, ad account pixels, Google Tag Manager and Google Analytics</li>
+                      <li class="group py-1">Manage database for remarketing purposes</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Dewana Digital Agency -->
+                <div
+                  class="container-timeline flex flex-col items-stretch py-[10px] relative w-[50%] lg:px-[50px] sm:w-full before:content-[''] before:bg-light2 before:dark:bg-dark2 before:w-[70%] before:lg:w-[45%] before:sm:w-[90%] before:h-[4px] before:left-10 before:sm:left-1/2 before:absolute before:top-12 before:lg:top-[19%] before:translate-y-1/2"
+                >
+                  <img
+                    src="src/img/Experience/Dewana.jpg"
+                    alt="Dewana Digital Agency"
+                    class="absolute w-10 rounded-[50%] border-solid border-light2 dark:border-dark2 border-4 top-8 z-10 lg:w-20 self-center"
+                  />
+                  <p class="absolute text-base font-bold top-[38px] right-[55%] text-dark1 text-opacity-50 dark:text-light1 dark:text-opacity-50 sm:block hidden z-30 lg:top-[60px]">
+                    Nov 2023 - Apr 2024
+                  </p>
+
+                  <div class="text-box py-5 px-[30px] relative bg-light2 dark:bg-dark2 rounded-md sm:w-[40%] sm:self-end">
+                    <h5 class="font-bold -mb-[6px] sm:-mb-0 text-base lg:text-lg text-dark2 dark:text-light2 whitespace-nowrap">Dewana Digital Agency</h5>
+                    <small class="inline-block mb-4 text-dark1 dark:text-light1 sm:hidden">Nov 2023 - Apr 2024</small>
+                    <h6 class="font-extrabold text-sm lg:text-base text-dark1 dark:text-light1 mb-1">Founder</h6>
+                    <ul class="list-disc mx-4 text-xs text-opacity-80 dark:text-opacity-80 lg:text-sm font-semibold text-dark1 dark:text-light1 sm:mt-4">
+                      <li class="group py-1">Design and execute digital marketing strategies across multiple platforms</li>
+                      <li class="group py-1">Perform data analysis to evaluate the effectiveness of digital marketing</li>
+                      <li class="group py-1">Create reports</li>
+                      <li class="group py-1">Conduct keyword and target audience research</li>
+                      <li class="group py-1">Manage ad accounts, ad account pixels, Google Tag Manager, and Google Analytics</li>
+                      <li class="group py-1">Manage database for remarketing purposes</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Freelance -->
+                <div
+                  class="container-timeline flex flex-col items-stretch py-[10px] relative w-[50%] lg:px-[50px] sm:w-full before:content-[''] before:bg-light2 before:dark:bg-dark2 before:w-[70%] before:lg:w-[45%] before:sm:w-[50%] before:h-[4px] before:left-10 before:sm:left-0 before:lg:left-20 before:absolute before:top-12 before:lg:top-[25%] before:translate-y-1/2"
+                >
+                  <img
+                    src="src/img/Experience/Workshop.png"
+                    alt="Freelance Digital Marketer"
+                    class="absolute w-10 rounded-[50%] border-solid border-light2 dark:border-dark2 border-4 top-8 z-10 lg:w-20 self-center"
+                  />
+                  <p class="absolute text-base lg:text-lg font-bold top-[38px] left-[55%] text-dark1 text-opacity-50 dark:text-light1 dark:text-opacity-50 sm:block hidden z-30 lg:top-[60px]">
+                    Mar 2022 - Present
+                  </p>
+
+                  <div class="text-box py-5 px-[30px] relative bg-light2 dark:bg-dark2 rounded-md sm:w-[40%] sm:self-start">
+                    <h5 class="font-bold -mb-[6px] sm:-mb-0 text-base lg:text-lg text-dark2 dark:text-light2 whitespace-nowrap">Freelance</h5>
+                    <small class="inline-block mb-4 text-dark1 dark:text-light1 sm:hidden">Mar 2022 - Present</small>
+                    <h6 class="font-extrabold text-sm lg:text-base text-dark1 dark:text-light1 mb-1">Digital Marketer</h6>
+                    <ul class="list-disc mx-4 text-xs text-opacity-80 dark:text-opacity-80 lg:text-sm font-semibold text-dark1 dark:text-light1 sm:mt-4">
+                      <li class="group py-1">Design and execute digital marketing strategies across multiple platforms</li>
+                      <li class="group py-1">Create reports</li>
+                      <li class="group py-1">Run and optimize ad campaigns</li>
+                      <li class="group py-1">Set up and manage ad accounts, ad account pixels, and Google Tag Manager</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- Experience Section End -->
+
+        <!-- Skills Section Start -->
+        <article id="skills" class="pb-8 pt-24">
+          <div class="container">
+            <div class="w-full px-4">
+              <div class="mx-auto mb-16 px-4">
+                <h4 class="text-lg font-medium uppercase text-dark1 text-opacity-80 dark:text-light1 dark:text-opacity-80">SKILLS</h4>
+                <h2 class="mb-5 max-w-md text-3xl font-extrabold text-dark1 lg:text-4xl dark:text-light1">What I can do as <br />A Digital Marketer.</h2>
+              </div>
+            </div>
+            <!-- Animation3 Start -->
+
+            <section class="marquee">
+              <div class="wrapper">
+                <div class="itemLeft item1 py-4 px-2">Digital Marketing</div>
+                <div class="itemLeft item2 py-4 px-2">Advertising</div>
+                <div class="itemLeft item3 py-4 px-2">TikTok Ads</div>
+                <div class="itemLeft item4 py-4 px-2">Google Ads</div>
+                <div class="itemLeft item5 py-4 px-2">Facebook Ads</div>
+                <div class="itemLeft item6 py-4 px-2">Display Ads</div>
+                <div class="itemLeft item7 py-2 px-2">
+                  Microsoft Visual <br />
+                  Studio Code
+                </div>
+                <div class="itemLeft item8 py-4 px-2">HTML</div>
+                <div class="itemLeft item9 py-4 px-2">CSS</div>
+                <div class="itemLeft item10 py-4 px-2">Tailwind</div>
+                <div class="itemLeft item11 py-4 px-2">PPC</div>
+                <div class="itemLeft item12 py-4 px-2">SEO</div>
+                <div class="itemLeft item13 py-4 px-2">SEM</div>
+                <div class="itemLeft item14 py-4 px-2">Wordpress</div>
+                <div class="itemLeft item15 py-4 px-2">Shopify</div>
+                <div class="itemLeft item16 py-4 px-2">WIX</div>
+                <div class="itemLeft item17 py-4 px-2">Google Analytics</div>
+                <div class="itemLeft item18 py-4 px-2">Google Tag Manager</div>
+                <div class="itemLeft item19 py-4 px-2">Translation</div>
+                <div class="itemLeft item20 py-4 px-2">Warehousing</div>
+              </div>
+
+              <div class="wrapper">
+                <div class="itemRight item1 py-4 px-2">Digital Marketing</div>
+                <div class="itemRight item2 py-4 px-2">Advertising</div>
+                <div class="itemRight item3 py-4 px-2">TikTok Ads</div>
+                <div class="itemRight item4 py-4 px-2">Google Ads</div>
+                <div class="itemRight item5 py-4 px-2">Facebook Ads</div>
+                <div class="itemRight item6 py-4 px-2">Display Ads</div>
+                <div class="itemRight item7 py-2 px-2">
+                  Microsoft Visual <br />
+                  Studio Code
+                </div>
+                <div class="itemRight item8 py-4 px-2">HTML</div>
+                <div class="itemRight item9 py-4 px-2">CSS</div>
+                <div class="itemRight item10 py-4 px-2">Tailwind</div>
+                <div class="itemRight item11 py-4 px-2">PPC</div>
+                <div class="itemRight item12 py-4 px-2">SEO</div>
+                <div class="itemRight item13 py-4 px-2">SEM</div>
+                <div class="itemRight item14 py-4 px-2">Wordpress</div>
+                <div class="itemRight item15 py-4 px-2">Shopify</div>
+                <div class="itemRight item16 py-4 px-2">WIX</div>
+                <div class="itemRight item17 py-4 px-2">Google Analytics</div>
+                <div class="itemRight item18 py-4 px-2">Google Tag Manager</div>
+                <div class="itemRight item19 py-4 px-2">Translation</div>
+                <div class="itemRight item20 py-4 px-2">Warehousing</div>
+              </div>
+            </section>
+            <!-- Animation3 End -->
+          </div>
+        </article>
+        <!-- Skills Section End -->
+
+        <!-- Projects Section Start -->
+        <article id="projects" class="pb-32 pt-36">
+          <div class="container">
+            <div class="w-full px-4">
+              <div class="mx-auto mb-16 px-4">
+                <h4 class="text-lg font-medium uppercase text-dark1 text-opacity-80 dark:text-light1 dark:text-opacity-80">My Work</h4>
+                <h2 class="mb-5 max-w-md text-3xl font-extrabold text-dark1 lg:text-4xl dark:text-light1">Projects.</h2>
+
+                <div class="gallery">
+                  <ul class="controls">
+                    <li class="buttons active" data-filter="all">All</li>
+                    <li class="buttons" data-filter="freelance">Freelance</li>
+                    <li class="buttons" data-filter="meta-ads">Meta Ads</li>
+                    <li class="buttons" data-filter="tiktok-ads">TikTok Ads</li>
+                    <li class="buttons" data-filter="google-ads">Google Ads</li>
+                    <li class="buttons" data-filter="google-analytics">
+                      Google <br />
+                      Analytics
+                    </li>
+                    <li class="buttons" data-filter="google-tag-manager">Google Tag Manager</li>
+                  </ul>
+
+                  <!-- Filter Container -->
+                  <div class="image-container">
+                    <a href="src/img/Projects/Freelance/dewana.png" class="projects-box freelance">
+                      <img src="src/img/Projects/Freelance/dewana.png" alt="Dewana Digital Agency" />
+                    </a>
+
+                    <a href="src/img/Projects/Freelance/Sampul Wodi.png" class="projects-box freelance">
+                      <img src="src/img/Projects/Freelance/Sampul Wodi.png" alt="Workshop Digital Agency" />
+                    </a>
+
+                    <a href="src/img/Projects/Freelance/wobel.png" class="projects-box freelance">
+                      <img src="src/img/Projects/Freelance/wobel.png" alt="Workshop Belanja" />
+                    </a>
+
+                    <a href="src/img/Projects/Freelance/wosha.png" class="projects-box freelance">
+                      <img src="src/img/Projects/Freelance/wosha.png" alt="Workshop Sharer" />
+                    </a>
+
+                    <a href="src/img/Projects/Meta Ads/FB Ads - Bita Shopee.png" class="projects-box meta-ads">
+                      <img src="src/img/Projects/Meta Ads/FB Ads - Bita Shopee.png" alt="Meta Ads Tubita CPAS" />
+                    </a>
+
+                    <a href="src/img/Projects/Meta Ads/FB Ads - Bita Web.png" class="projects-box meta-ads">
+                      <img src="src/img/Projects/Meta Ads/FB Ads - Bita Web.png" alt="Meta Ads Tubita" />
+                    </a>
+
+                    <a href="src/img/Projects/Meta Ads/FB Ads - Dynamic 2.png" class="projects-box meta-ads">
+                      <img src="src/img/Projects/Meta Ads/FB Ads - Dynamic 2.png" alt="Meta Ads Dynamic Indonesia" />
+                    </a>
+
+                    <a href="src/img/Projects/Meta Ads/FB Ads - Dynamic.png" class="projects-box meta-ads">
+                      <img src="src/img/Projects/Meta Ads/FB Ads - Dynamic.png" alt="Meta Ads Dynamic Indonesia 2" />
+                    </a>
+
+                    <a href="src/img/Projects/Meta Ads/FB Ads - LPS.png" class="projects-box meta-ads">
+                      <img src="src/img/Projects/Meta Ads/FB Ads - LPS.png" alt="Meta Ads Les Privat SBMPTN" />
+                    </a>
+
+                    <a href="src/img/Projects/Meta Ads/FB Ads - Matrix.png" class="projects-box meta-ads">
+                      <img src="src/img/Projects/Meta Ads/FB Ads - Matrix.png" alt="Meta Ads Matrix Education" />
+                    </a>
+
+                    <a href="src/img/Projects/Meta Ads/FB Ads - Restobilt.png" class="projects-box meta-ads">
+                      <img src="src/img/Projects/Meta Ads/FB Ads - Restobilt.png" alt="Meta Ads Restobilt" />
+                    </a>
+
+                    <a href="src/img/Projects/Meta Ads/FB Ads - Tufine Traffic.png" class="projects-box meta-ads">
+                      <img src="src/img/Projects/Meta Ads/FB Ads - Tufine Traffic.png" alt="Meta Ads Tufine" />
+                    </a>
+
+                    <a href="src/img/Projects/Meta Ads/FB Ads - Upsight.png" class="projects-box meta-ads">
+                      <img src="src/img/Projects/Meta Ads/FB Ads - Upsight.png" alt="Meta Ads Upsight" />
+                    </a>
+
+                    <a href="src/img/Projects/Tiktok Ads/Tiktok Ads - Bita.png" class="projects-box tiktok-ads">
+                      <img src="src/img/Projects/Tiktok Ads/Tiktok Ads - Bita.png" alt="TikTok Ads Tubita" />
+                    </a>
+
+                    <a href="src/img/Projects/Tiktok Ads/TikTok Ads - Dynamic.png" class="projects-box tiktok-ads">
+                      <img src="src/img/Projects/Tiktok Ads/TikTok Ads - Dynamic.png" alt="TikTok Ads Dynamic" />
+                    </a>
+
+                    <a href="src/img/Projects/Google Ads/Google Ads - ALFA Privat.png" class="projects-box google-ads">
+                      <img src="src/img/Projects/Google Ads/Google Ads - ALFA Privat.png" alt="Google Ads ALFA Privat" />
+                    </a>
+
+                    <a href="src/img/Projects/Google Ads/Google Ads - Dynamic.png" class="projects-box google-ads">
+                      <img src="src/img/Projects/Google Ads/Google Ads - Dynamic.png" alt="Google Ads Dynamic Indonesia" />
+                    </a>
+
+                    <a href="src/img/Projects/Google Ads/Google Ads - Halo Tutor.png" class="projects-box google-ads">
+                      <img src="src/img/Projects/Google Ads/Google Ads - Halo Tutor.png" alt="Google Ads Halo Tutor" />
+                    </a>
+
+                    <a href="src/img/Projects/Google Ads/Google Ads - Les Privat SBMPTN.png" class="projects-box google-ads">
+                      <img src="src/img/Projects/Google Ads/Google Ads - Les Privat SBMPTN.png" alt="Google Ads Les Privat SBMPTN" />
+                    </a>
+
+                    <a href="src/img/Projects/Google Ads/Google Ads - Matrix Tutoring.png" class="projects-box google-ads">
+                      <img src="src/img/Projects/Google Ads/Google Ads - Matrix Tutoring.png" alt="Google Ads Matrix Education" />
+                    </a>
+
+                    <a href="src/img/Projects/Google Ads/Google Ads - Supercamp Matrix.png" class="projects-box google-ads">
+                      <img src="src/img/Projects/Google Ads/Google Ads - Supercamp Matrix.png" alt="Google Ads Supercamp Matrix" />
+                    </a>
+
+                    <a href="src/img/Projects/Google Ads/Google Ads - Tufine.png" class="projects-box google-ads">
+                      <img src="src/img/Projects/Google Ads/Google Ads - Tufine.png" alt="Google Ads Tufine" />
+                    </a>
+
+                    <a href="src/img/Projects/Google Analytics/Analytics 1.png" class="projects-box google-analytics">
+                      <img src="src/img/Projects/Google Analytics/Analytics 1.png" alt="Google Analytics 1" />
+                    </a>
+
+                    <a href="src/img/Projects/Google Analytics/Analytics 2.png" class="projects-box google-analytics">
+                      <img src="src/img/Projects/Google Analytics/Analytics 2.png" alt="Google Analytics 2" />
+                    </a>
+
+                    <a href="src/img/Projects/Google Analytics/Analytics 3.png" class="projects-box google-analytics">
+                      <img src="src/img/Projects/Google Analytics/Analytics 3.png" alt="Google Analytics 3" />
+                    </a>
+
+                    <a href="src/img/Projects/Google Analytics/Analytics 4.png" class="projects-box google-analytics">
+                      <img src="src/img/Projects/Google Analytics/Analytics 4.png" alt="Google Analytics 4" />
+                    </a>
+
+                    <a href="src/img/Projects/Google Analytics/Anayltics 5.png" class="projects-box google-analytics">
+                      <img src="src/img/Projects/Google Analytics/Anayltics 5.png" alt="Google Analytics 5" />
+                    </a>
+
+                    <a href="src/img/Projects/Google Tag Manager/GTM 1.png" class="projects-box google-tag-manager">
+                      <img src="src/img/Projects/Google Tag Manager/GTM 1.png" alt="Google Tag Manager 1" />
+                    </a>
+
+                    <a href="src/img/Projects/Google Tag Manager/GTM 2.png" class="projects-box google-tag-manager">
+                      <img src="src/img/Projects/Google Tag Manager/GTM 2.png" alt="Google Tag Manager 2" />
+                    </a>
+
+                    <a href="src/img/Projects/Google Tag Manager/GTM 3.png" class="projects-box google-tag-manager">
+                      <img src="src/img/Projects/Google Tag Manager/GTM 3.png" alt="Google Tag Manager 3" />
+                    </a>
+
+                    <a href="src/img/Projects/Google Tag Manager/GTM 4.png" class="projects-box google-tag-manager">
+                      <img src="src/img/Projects/Google Tag Manager/GTM 4.png" alt="Google Tag Manager 4" />
+                    </a>
+
+                    <a href="src/img/Projects/Google Tag Manager/GTM 5.png" class="projects-box google-tag-manager">
+                      <img src="src/img/Projects/Google Tag Manager/GTM 5.png" alt="Google Tag Manager 5" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Loadmore button Start -->
+          <!-- <div class="images-container">
+            <div class="image">
+              <img src="images/img-1.jpg" alt="" />
+            </div>
+            <div class="image">
+              <img src="images/img-2.jpg" alt="" />
+            </div>
+            <div class="image">
+              <img src="images/img-3.jpg" alt="" />
+            </div>
+            <div class="image">
+              <img src="images/img-4.jpg" alt="" />
+            </div>
+            <div class="image">
+              <img src="images/img-5.jpg" alt="" />
+            </div>
+            <div class="image">
+              <img src="images/img-6.jpg" alt="" />
+            </div>
+      
+            <div class="image">
+              <img src="images/img-1.jpg" alt="" />
+            </div>
+            <div class="image">
+              <img src="images/img-2.jpg" alt="" />
+            </div>
+            <div class="image">
+              <img src="images/img-3.jpg" alt="" />
+            </div>
+            <div class="image">
+              <img src="images/img-4.jpg" alt="" />
+            </div>
+            <div class="image">
+              <img src="images/img-5.jpg" alt="" />
+            </div>
+            <div class="image">
+              <img src="images/img-6.jpg" alt="" />
+            </div>
+          </div>
+      
+          <button class="load-more">Load More</button>
+      
+          <script>
+            $(document).ready(function () {
+              $('.image').slice(0, 4).fadeIn();
+              $('.load-more').click(function () {
+                $('.image').slice(0, 8).fadeIn();
+                $(this).click(function () {
+                  $('.image').slice(0, 12).fadeIn();
+                  $(this).fadeOut();
+                });
+              });
+            });
+          </script> -->
+          <!-- Loadmore button End -->
+        </article>
+        <!-- Projects Section End -->
+
+        <!-- Credit Section Start -->
+        <article id="credits" class="pb-32 pt-36">
+          <div class="container">
+            <div class="w-full px-4">
+              <div class="mx-auto mb-16">
+                <h4 class="text-lg font-medium uppercase text-dark1 text-opacity-80 dark:text-light1 dark:text-opacity-80">PEOPLE AND TECH</h4>
+                <h2 class="mb-5 max-w-md text-3xl font-extrabold text-dark1 lg:text-4xl dark:text-light1">Credits.</h2>
+
+                <div class="container-credit">
+                  <div class="icon-credit">
+                    <div class="imgBx img-active" style="--credit: 1" data-id="content1">
+                      <img src="src/img/Credits/FotoDiri.webp" alt="Kevin Falah" />
+                    </div>
+                    <div class="imgBx" style="--credit: 2" data-id="content2">
+                      <img src="src/img/Credits/Coding Nepal.jpg" alt="Coding Nepal" />
+                    </div>
+                    <div class="imgBx" style="--credit: 3" data-id="content3">
+                      <img src="src/img/Credits/Greatstackdev.jpg" alt="Great Stack Dev" />
+                    </div>
+                    <div class="imgBx" style="--credit: 4" data-id="content4">
+                      <img src="src/img/Credits/jamie wilson.png" alt="Jamie Wilson" />
+                    </div>
+                    <div class="imgBx" style="--credit: 5" data-id="content5">
+                      <img src="src/img/Credits/Javascript Mastery.jpg" alt="Javascript Mastery" />
+                    </div>
+                    <div class="imgBx" style="--credit: 6" data-id="content5">
+                      <img src="src/img/Credits/Lundev.jpg" alt="Lun Dev" />
+                    </div>
+                    <div class="imgBx" style="--credit: 7" data-id="content5">
+                      <img src="src/img/Credits/Online Tutorial.jpg" alt="Online Tutorial" />
+                    </div>
+                    <div class="imgBx" style="--credit: 8" data-id="content5">
+                      <img src="src/img/Credits/Shandika.jpg" alt="Shandika Galih" />
+                    </div>
+                    <div class="imgBx" style="--credit: 9" data-id="content5">
+                      <img src="src/img/Credits/Tahmid Ahmed.jpg" alt="Tahmid Ahmed" />
+                    </div>
+                  </div>
+
+                  <div class="content-credit">
+                    <div id="content1" class="contentBx img-active">
+                      <div class="credit-card">
+                        <div class="imgBx">
+                          <img src="src/img/Credits/FotoDiri.webp" alt="Kevin Falah" />
+                        </div>
+                        <div class="textBx">
+                          <h2>Kevin Falah</h2>
+                          <a href="https://kevin-falah.vercel.app/"
+                            ><div class="container-imgHover">
+                              <img src="src/img/Credits/vercel-black.png" alt="Kevin Falah Vercel" id="img-black" /><img
+                                src="src/img/Credits/vercel-gray.png"
+                                alt="Kevin Falah Vercel"
+                                id="img-gray"
+                              /></div
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="content2" class="contentBx">
+                      <div class="credit-card">
+                        <div class="imgBx">
+                          <img src="src/img/Credits/Coding Nepal.jpg" alt="Coding Nepal" />
+                        </div>
+                        <div class="textBx">
+                          <h2>Coding Nepal</h2>
+                          <a href="https://www.youtube.com/@CodingNepal"><img src="src/img/Credits/youtube-color-svgrepo-com.png" alt="Youtube Link" /></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="content3" class="contentBx">
+                      <div class="credit-card">
+                        <div class="imgBx">
+                          <img src="src/img/Credits/Greatstackdev.jpg" alt="Great Stack Dev" />
+                        </div>
+                        <div class="textBx">
+                          <h2>Great Stack Dev</h2>
+                          <a href="https://www.youtube.com/@GreatStackDev"><img src="src/img/Credits/youtube-color-svgrepo-com.png" alt="Youtube" /></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="content4" class="contentBx">
+                      <div class="credit-card">
+                        <div class="imgBx">
+                          <img src="src/img/Credits/jamie wilson.png" alt="Jamie Wilson" alt="Jamie Wilson" />
+                        </div>
+                        <div class="textBx">
+                          <h2>Jamie Wilson</h2>
+                          <a href="https://github.com/jamiewilson"
+                            ><div class="container-imgHover">
+                              <img src="src/img/Credits/github-black.png" alt="Jamie Wilson Github" id="img-black" /><img
+                                src="src/img/Credits/github-gray.png"
+                                alt="Jamie Wilson Github"
+                                id="img-gray"
+                              /></div
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="content5" class="contentBx">
+                      <div class="credit-card">
+                        <div class="imgBx">
+                          <img src="src/img/Credits/Javascript Mastery.jpg" alt="Javascript Mastery" />
+                        </div>
+                        <div class="textBx">
+                          <h2>Javascript Mastery</h2>
+                          <a href="https://www.youtube.com/@javascriptmastery"><img src="src/img/Credits/youtube-color-svgrepo-com.png" alt="Youtube" /></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="content6" class="contentBx">
+                      <div class="credit-card">
+                        <div class="imgBx">
+                          <img src="src/img/Credits/Lundev.jpg" alt="Lun Dev" />
+                        </div>
+                        <div class="textBx">
+                          <h2>Lun Dev</h2>
+                          <a href="https://www.youtube.com/@lundeveloper"><img src="src/img/Credits/youtube-color-svgrepo-com.png" alt="Youtube" /></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="content7" class="contentBx">
+                      <div class="credit-card">
+                        <div class="imgBx">
+                          <img src="src/img/Credits/Online Tutorial.jpg" alt="Online Tutorial" />
+                        </div>
+                        <div class="textBx">
+                          <h2>Online Tutorial</h2>
+                          <a href="https://www.youtube.com/@OnlineTutorialsYT"><img src="src/img/Credits/youtube-color-svgrepo-com.png" alt="Youtube" /></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="content8" class="contentBx">
+                      <div class="credit-card">
+                        <div class="imgBx">
+                          <img src="src/img/Credits/Shandika.jpg" alt="Sandhika Galih" />
+                        </div>
+                        <div class="textBx">
+                          <h2>Sandhika Galih</h2>
+                          <a href="https://www.youtube.com/@sandhikagalihWPU"><img src="src/img/Credits/youtube-color-svgrepo-com.png" alt="Youtube" /></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="content9" class="contentBx">
+                      <div class="credit-card">
+                        <div class="imgBx">
+                          <img src="src/img/Credits/Tahmid Ahmed.jpg" alt="Tahmid Ahmed" />
+                        </div>
+                        <div class="textBx">
+                          <h2>Tahmid Ahmed</h2>
+                          <a href="https://www.youtube.com/@tahmidahmed-yt"><img src="src/img/Credits/youtube-color-svgrepo-com.png" alt="Youtube" /></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- <div id="content2" class="contentBx">
+                      <div class="credit-card">
+                        <div class="imgBx">
+                          <img src="src/img/Credits/html-5-svgrepo-com.png" alt="" />
+                        </div>
+                        <div class="textBx">
+                          <h2>Someone Famous <br /><span>Product Designer</span></h2>
+                          <ul class="sci">
+                            <li>
+                              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="content3" class="contentBx">
+                      <div class="credit-card">
+                        <div class="imgBx">
+                          <img src="src/img/Credits/tailwind-svgrepo-com.png" alt="" />
+                        </div>
+                        <div class="textBx">
+                          <h2>Someone Famous <br /><span>Product Designer</span></h2>
+                          <ul class="sci">
+                            <li>
+                              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="content4" class="contentBx">
+                      <div class="credit-card">
+                        <div class="imgBx">
+                          <img src="src/img/Credits/vercel-fill-svgrepo-com.png" alt="" />
+                        </div>
+                        <div class="textBx">
+                          <h2>Someone Famous <br /><span>Product Designer</span></h2>
+                          <ul class="sci">
+                            <li>
+                              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="content5" class="contentBx">
+                      <div class="credit-card">
+                        <div class="imgBx">
+                          <img src="src/img/Credits/youtube-color-svgrepo-com.png" alt="" />
+                        </div>
+                        <div class="textBx">
+                          <h2>Someone Famous <br /><span>Product Designer</span></h2>
+                          <ul class="sci">
+                            <li>
+                              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- Credit Section End -->
+
+        <!-- Contact Section Start -->
+        <article id="contact">
+          <div class="container">
+            <div class="w-full px-4">
+              <div class="mx-auto mb-16">
+                <h4 class="text-lg font-medium uppercase text-dark1 text-opacity-80 dark:text-light1 dark:text-opacity-80">GET IN TOUCH</h4>
+                <h2 class="mb-5 max-w-md text-3xl font-extrabold text-dark1 lg:text-4xl dark:text-light1">Contact.</h2>
+              </div>
+            </div>
+
+            <!-- Form 1 Start -->
+            <!-- <div class="contact-container">
+              <div class="contact-left">
+                <form name="web-porto-submit-form">
+                  <input type="text" id="fullName" name="fullname" placeholder="Your Name" class="contact-inputs" required />
+                  <input type="email" id="email_id" name="email" placeholder="Your Email" class="contact-inputs" required />
+                  <input type="text" id="subject" name="subject" placeholder="Email Subject" class="contact-inputs" required />
+                  <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+                  <button type="submit" class="btn-send w-full flex justify-center items-center py-[15px] px-[30px] text-base text-white gap-[10px] border-none rounded-[50px] cursor-pointer">
+                    Send
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn-loader w-full hidden justify-center items-center py-[11px] px-[30px] text-base text-white gap-[10px] border-none rounded-[50px] cursor-pointer"
+                    disabled
+                  >
+                    <div>
+                      <span></span>
+                    </div>
+                    Sending...
+                  </button>
+                </form>
+              </div>
+              <div class="contact-right bg-purple-500">
+                <img src="src/img/Contacts/whatsapp-svgrepo-com.png" alt="" />
+              </div>
+            </div> -->
+            <!-- Form 1 End -->
+
+            <!-- Form 2 Start -->
+            <!-- <section class="contact">
+              <div class="contact-wrapper">
+                <h2>Send us a Message</h2>
+                <form action="#">
+                  <div class="dbl-field">
+                    <div class="field">
+                      <input type="text" placeholder="Enter your name" />
+                      <i class="fas fa-user"></i>
+                    </div>
+                    <div class="field">
+                      <input type="text" placeholder="Enter your Email" />
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="field">
+                      <input type="text" placeholder="Enter your phone" />
+                      <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="field">
+                      <input type="text" placeholder="Enter your website" />
+                      <i class="fas fa-globe"></i>
+                    </div>
+                  </div>
+                  <div class="message">
+                    <textarea placeholder="Write your message"></textarea>
+                    <i class="material-icons">message</i>
+                  </div>
+                  <div class="button-area">
+                    <button type="submit">Send Message</button>
+                    <span>Sending your message...</span>
+                  </div>
+                </form>
+              </div>
+            </section> -->
+            <!-- Form 2 End -->
+
+            <!-- Form 3 Start -->
+            <section class="contact">
+              <div class="contact-form">
+                <!-- <h1>Contact <span>Us</span></h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, magnam libero iusto totam esse enim aliquam minima consequuntur consectetur. Ad.</p> -->
+                <form action="">
+                  <input type="" placeholder="Your Name" required />
+                  <input type="email" placeholder="Your Email" required />
+                  <input type="" placeholder="Email Subject" required />
+                  <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                  <input type="submit" name="" value="Submit" class="btn" />
+                </form>
+              </div>
+
+              <div class="contact-img">
+                <img src="src/img/Contacts/whatsapp-svgrepo-com.png" alt="" />
+              </div>
+            </section>
+            <!-- Form 3 End -->
+          </div>
+        </article>
+        <!-- Contact Section End -->
+
+        <!-- Aside Start -->
+        <aside class="fixed inset-y-0 end-0 hidden z-50 lg:block">
+          <div class="social-media h-full flex">
+            <ul class="py-6 px-[0.8rem] m-auto flex flex-col flex-nowrap justify-center items-center gap-6 shadow drop-shadow-lg shadow-dark3 rounded-tl-xl rounded-bl-xl">
+              <li>
+                <a href="https://www.linkedin.com/in/hutomo-hendriawan-05a890202"><img src="src/img/Aside/linkedin-svgrepo-com (1).svg" alt="LinkedIn" class="w-8 grayscale hover:grayscale-0" /></a>
+              </li>
+              <li>
+                <a href="https://instagram.com/hutomo.hendriawan"><img src="src/img/Aside/instagram-1-svgrepo-com.svg" alt="Instagram" class="w-8 grayscale hover:opacity-100 hover:grayscale-0" /></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/official.endik"><img src="src/img/Aside/facebook-svgrepo-com (1).svg" alt="Facebook" class="w-8 grayscale hover:opacity-100 hover:grayscale-0" /></a>
+              </li>
+              <li>
+                <a href="https://www.tiktok.com/@hutomohendriawan"><img src="src/img/Aside/tiktok-svgrepo-com.svg" alt="TikTok" class="w-8 grayscale hover:opacity-100 hover:grayscale-0" /></a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <!-- Aside End -->
+
+        <!-- Footer Start -->
+        <footer class="bg-dark pb-12 pt-24">
+          <div class="container">
+            <div class="w-full border-t border-slate-700 pt-10">
+              <div class="mb-5 flex items-center justify-center">
+                <!-- Instagram Icon -->
+                <a href="https://www.linkedin.com/in/hutomo-hendriawan-05a890202" target="_blank" class="mx-[10px] flex h-9 w-9 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0">
+                  <img src="src/img/Aside/linkedin-svgrepo-com (1).svg" alt="LinkedIn" title="LinkedIn" />
+                </a>
+                <a href="https://instagram.com/hutomo.hendriawan" target="_blank" class="mx-[10px] flex h-9 w-9 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0">
+                  <img src="src/img/Aside/instagram-1-svgrepo-com.svg" alt="Instagram" title="Instagram" />
+                </a>
+                <a href="https://www.facebook.com/official.endik" target="_blank" class="mx-[10px] flex h-9 w-9 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0">
+                  <img src="src/img/Aside/facebook-svgrepo-com (1).svg" alt="Facebook" title="Facebook" />
+                </a>
+                <a href="https://www.tiktok.com/@hutomohendriawan" target="_blank" class="mx-[10px] flex h-9 w-9 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0">
+                  <img src="src/img/Aside/tiktok-svgrepo-com.svg" alt="TikTok" title="TikTok" />
+                </a>
+              </div>
+              <p class="text-center text-xs font-medium text-slate-500">Created by <strong>HUTOMO HENDRIAWAN</strong></p>
+            </div>
+          </div>
+        </footer>
+        <!-- Footer End -->
+
+        <!-- Back to Top button Start -->
+        <a href="#home" class="items center fixed bottom-4 right-4 z-[9999] hidden h-14 w-14 justify-center rounded-full bg-primary p-4 hover:animate-pulse" id="to-top">
+          <span class="mt-2 block h-5 w-5 rotate-45 border-l-2 border-t-2"></span>
+        </a>
+        <!-- Back to Top button End -->
+      </div>
+    </main>
+
+    <!-- Javascript -->
+    <script src="src/js/script.js"></script>
+
+    <!-- Ion Icon Sript Start -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Ion Icon Script End -->
+
+    <!-- GSAP Script Start-->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script>
+      gsap.to('#myText', { duration: 3, text: "I'm Hutomo Hendriawan", delay: 2, repeat: -1, repeatDelay: 2, yoyo: true });
+    </script>
+    <!-- GSAP Script End-->
+
+    <!-- AOS Script Start -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- AOS Script End -->
+
+    <!-- JQuery Script Start -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- JQuery Script End -->
+
+    <!-- Magnific Popup Start -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/jquery.magnific-popup.min.js"
+      integrity="sha512-fCRpXk4VumjVNtE0j+OyOqzPxF1eZwacU3kN3SsznRPWHgMTSSo7INc8aY03KQDBWztuMo5KjKzCFXI/a5rVYQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Magnific Popup End -->
+
+    <!-- Script Projects Section Start -->
+    <script>
+      $(document).ready(function () {
+        $('.buttons').click(function () {
+          $(this).addClass('active').siblings().removeClass('active');
+
+          var filter = $(this).attr('data-filter');
+
+          if (filter == 'all') {
+            $('.projects-box').show(400);
+          } else {
+            $('.projects-box')
+              .not('.' + filter)
+              .hide(200);
+            $('.projects-box')
+              .filter('.' + filter)
+              .show(400);
+          }
+        });
+
+        $('.gallery').magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          gallery: {
+            enabled: true,
+          },
+        });
+      });
+    </script>
+    <!-- Script Projects Section End-->
+
+    <!-- Script Credit Section Start -->
+    <script>
+      let imgBx = document.querySelectorAll('.imgBx');
+      let contentBx = document.querySelectorAll('.contentBx');
+
+      for (let i = 0; i < imgBx.length; i++) {
+        imgBx[i].addEventListener('click', function () {
+          for (let i = 0; i < contentBx.length; i++) {
+            contentBx[i].className = 'contentBx';
+          }
+          document.getElementById(this.dataset.id).className = 'contentBx img-active';
+
+          for (let i = 0; i < imgBx.length; i++) {
+            imgBx[i].className = 'imgBx';
+          }
+          this.className = 'imgBx img-active';
+        });
+      }
+    </script>
+    <!-- Script Credit Section End -->
+
+    <!-- SweetAlert2 Start -->
+    <script src="dist/sweetalert2.all.min.js"></script>
+    <!-- SweetAlert2 End -->
+
+    <!-- Contact script jamiewilson Start -->
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzZjK3cN0OeFs2TjfrOZjGVW2ejdq7QjecKb_wTwMhYeQF_V5DpH0qQics-vlyN-FMPsA/exec';
+      const form = document.forms['web-porto-submit-form'];
+      const btnSend = document.querySelector('.btn-send');
+      const btnLoader = document.querySelector('.btn-loader');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // ketika tombol send diklik
+        // tampilkan tombol loading, hilangkan tombol send
+        btnLoader.classList.toggle('hidden');
+        btnLoader.classList.toggle('flex');
+
+        btnSend.classList.toggle('flex');
+        btnSend.classList.toggle('hidden');
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then((response) => {
+            // tampilkan tombol send, hilangkan tombol loading
+            btnLoader.classList.toggle('hidden');
+            btnLoader.classList.toggle('flex');
+
+            btnSend.classList.toggle('flex');
+            btnSend.classList.toggle('hidden');
+
+            // tampilkan alert
+            Swal.fire({
+              icon: 'success',
+              title: 'Thank You!',
+              text: 'I will keep in touch with you shortly :)',
+            });
+
+            // reset form
+            form.reset();
+            console.log('Success!', response);
+          })
+          .catch((error) => {
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Something went wrong!',
+            });
+
+            console.error('Error!', error.message);
+          });
+      });
+    </script>
+    <!-- Contact script jamiewilson End -->
+  </body>
+</html>
