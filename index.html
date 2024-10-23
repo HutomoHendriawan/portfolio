@@ -108,6 +108,8 @@
 
     <main>
       <div class="content">
+        <div id="particles-jsLight" class="snowParticles fixed w-full h-full -z-10"></div>
+        <div id="particles-jsDark" class="starParticles fixed w-full h-full -z-10"></div>
         <!-- Hero Section Start -->
         <article id="home" class="pt-36 lg:pt-48 h-screen">
           <div class="container">
@@ -698,266 +700,379 @@
         <!-- Projects Section End -->
 
         <!-- Credit Section Start -->
-        <article id="credits" class="pb-32 pt-36">
-          <div class="container">
-            <div class="w-full px-4">
-              <div class="mx-auto mb-16">
+        <article id="credits" class="pb-8 pt-24">
+          <div class="lg:container">
+            <div class="w-full px-2 lg:px-4">
+              <div class="mx-auto mb-16 px-2 lg:px-4 title-container">
                 <h4 class="text-lg font-medium uppercase text-dark1 text-opacity-80 dark:text-light1 dark:text-opacity-80">PEOPLE AND TECH</h4>
                 <h2 class="mb-5 max-w-md text-3xl font-extrabold text-dark1 lg:text-4xl dark:text-light1">Credits.</h2>
+              </div>
 
-                <div class="container-credit">
-                  <div class="icon-credit">
-                    <div class="imgBx img-active" style="--credit: 1" data-id="content1">
-                      <img src="src/img/Credits/FotoDiri.webp" alt="Kevin Falah" />
+              <div class="w-full flex items-center justify-center px-4">
+                <div class="credit-container flex flex-col lg:flex-wrap items-center justify-evenly px-1 lg:px-2 lg:-mx-5">
+                  <div class="flex flex-row mb-5 lg:mb-10">
+                    <button id="credit-people" class="text-white btn-credit active">People!</button>
+                    <button id="credit-tech" class="text-white btn-credit">Tech!</button>
+                  </div>
+
+                  <!-- Credit People -->
+                  <div class="container-credit cont-credit-people">
+                    <div class="icon-credit">
+                      <div class="imgBx img-active content1-people-class" style="--credit: 1" data-id="content1">
+                        <img src="src/img/Credits/People/Kevin Falah.webp" alt="Kevin Falah" />
+                      </div>
+                      <div class="imgBx" style="--credit: 2" data-id="content2">
+                        <img src="src/img/Credits/People/Coding Nepal.jpg" alt="Coding Nepal" />
+                      </div>
+                      <div class="imgBx" style="--credit: 3" data-id="content3">
+                        <img src="src/img/Credits/People/Greatstackdev.jpg" alt="Great Stack Dev" />
+                      </div>
+                      <div class="imgBx" style="--credit: 4" data-id="content4">
+                        <img src="src/img/Credits/People/jamie wilson.png" alt="Jamie Wilson" />
+                      </div>
+                      <div class="imgBx" style="--credit: 5" data-id="content5">
+                        <img src="src/img/Credits/People/Javascript Mastery.jpg" alt="Javascript Mastery" />
+                      </div>
+                      <div class="imgBx" style="--credit: 6" data-id="content6">
+                        <img src="src/img/Credits/People/Lundev.jpg" alt="Lun Dev" />
+                      </div>
+                      <div class="imgBx" style="--credit: 7" data-id="content7">
+                        <img src="src/img/Credits/People/Online Tutorial.jpg" alt="Online Tutorial" />
+                      </div>
+                      <div class="imgBx" style="--credit: 8" data-id="content8">
+                        <img src="src/img/Credits/People/Sandhika.jpg" alt="Sandhika Galih" />
+                      </div>
+                      <div class="imgBx" style="--credit: 9" data-id="content9">
+                        <img src="src/img/Credits/People/Tahmid Ahmed.jpg" alt="Tahmid Ahmed" />
+                      </div>
                     </div>
-                    <div class="imgBx" style="--credit: 2" data-id="content2">
-                      <img src="src/img/Credits/Coding Nepal.jpg" alt="Coding Nepal" />
-                    </div>
-                    <div class="imgBx" style="--credit: 3" data-id="content3">
-                      <img src="src/img/Credits/Greatstackdev.jpg" alt="Great Stack Dev" />
-                    </div>
-                    <div class="imgBx" style="--credit: 4" data-id="content4">
-                      <img src="src/img/Credits/jamie wilson.png" alt="Jamie Wilson" />
-                    </div>
-                    <div class="imgBx" style="--credit: 5" data-id="content5">
-                      <img src="src/img/Credits/Javascript Mastery.jpg" alt="Javascript Mastery" />
-                    </div>
-                    <div class="imgBx" style="--credit: 6" data-id="content5">
-                      <img src="src/img/Credits/Lundev.jpg" alt="Lun Dev" />
-                    </div>
-                    <div class="imgBx" style="--credit: 7" data-id="content5">
-                      <img src="src/img/Credits/Online Tutorial.jpg" alt="Online Tutorial" />
-                    </div>
-                    <div class="imgBx" style="--credit: 8" data-id="content5">
-                      <img src="src/img/Credits/Shandika.jpg" alt="Shandika Galih" />
-                    </div>
-                    <div class="imgBx" style="--credit: 9" data-id="content5">
-                      <img src="src/img/Credits/Tahmid Ahmed.jpg" alt="Tahmid Ahmed" />
+
+                    <div class="content-credit">
+                      <div id="content1" class="contentBx img-active">
+                        <div class="credit-card">
+                          <div class="imgBx">
+                            <img src="src/img/Credits/People/Kevin Falah.webp" alt="Kevin Falah" />
+                          </div>
+                          <div class="textBx">
+                            <h2>Kevin Falah</h2>
+                            <a href="https://kevin-falah.vercel.app/"
+                              ><div class="container-imgHover">
+                                <img src="src/img/Credits/People/vercel-black.png" alt="Kevin Falah Vercel" id="img-black" /><img
+                                  src="src/img/Credits/People/vercel-gray.png"
+                                  alt="Kevin Falah Vercel"
+                                  id="img-gray"
+                                /></div
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="content2" class="contentBx">
+                        <div class="credit-card">
+                          <div class="imgBx">
+                            <img src="src/img/Credits/People/Coding Nepal.jpg" alt="Coding Nepal" />
+                          </div>
+                          <div class="textBx">
+                            <h2>Coding Nepal</h2>
+                            <a href="https://www.youtube.com/@CodingNepal"><img src="src/img/Credits/People/youtube-color-svgrepo-com.png" alt="Youtube Link" /></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="content3" class="contentBx">
+                        <div class="credit-card">
+                          <div class="imgBx">
+                            <img src="src/img/Credits/People/Greatstackdev.jpg" alt="Great Stack Dev" />
+                          </div>
+                          <div class="textBx">
+                            <h2>Great Stack Dev</h2>
+                            <a href="https://www.youtube.com/@GreatStackDev"><img src="src/img/Credits/People/youtube-color-svgrepo-com.png" alt="Youtube" /></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="content4" class="contentBx">
+                        <div class="credit-card">
+                          <div class="imgBx">
+                            <img src="src/img/Credits/People/jamie wilson.png" alt="Jamie Wilson" />
+                          </div>
+                          <div class="textBx">
+                            <h2>Jamie Wilson</h2>
+                            <a href="https://github.com/jamiewilson"
+                              ><div class="container-imgHover">
+                                <img src="src/img/Credits/People/github-black.png" alt="Jamie Wilson Github" id="img-black" /><img
+                                  src="src/img/Credits/People/github-gray.png"
+                                  alt="Jamie Wilson Github"
+                                  id="img-gray"
+                                /></div
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="content5" class="contentBx">
+                        <div class="credit-card">
+                          <div class="imgBx">
+                            <img src="src/img/Credits/People/Javascript Mastery.jpg" alt="Javascript Mastery" />
+                          </div>
+                          <div class="textBx">
+                            <h2>Javascript Mastery</h2>
+                            <a href="https://www.youtube.com/@javascriptmastery"><img src="src/img/Credits/People/youtube-color-svgrepo-com.png" alt="Youtube" /></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="content6" class="contentBx">
+                        <div class="credit-card">
+                          <div class="imgBx">
+                            <img src="src/img/Credits/People/Lundev.jpg" alt="Lun Dev" />
+                          </div>
+                          <div class="textBx">
+                            <h2>Lun Dev</h2>
+                            <a href="https://www.youtube.com/@lundeveloper"><img src="src/img/Credits/People/youtube-color-svgrepo-com.png" alt="Youtube" /></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="content7" class="contentBx">
+                        <div class="credit-card">
+                          <div class="imgBx">
+                            <img src="src/img/Credits/People/Online Tutorial.jpg" alt="Online Tutorial" />
+                          </div>
+                          <div class="textBx">
+                            <h2>Online Tutorial</h2>
+                            <a href="https://www.youtube.com/@OnlineTutorialsYT"><img src="src/img/Credits/People/youtube-color-svgrepo-com.png" alt="Youtube" /></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="content8" class="contentBx">
+                        <div class="credit-card">
+                          <div class="imgBx">
+                            <img src="src/img/Credits/People/Sandhika.jpg" alt="Sandhika Galih" />
+                          </div>
+                          <div class="textBx">
+                            <h2>Sandhika Galih</h2>
+                            <a href="https://www.youtube.com/@sandhikagalihWPU"><img src="src/img/Credits/People/youtube-color-svgrepo-com.png" alt="Youtube" /></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="content9" class="contentBx">
+                        <div class="credit-card">
+                          <div class="imgBx">
+                            <img src="src/img/Credits/People/Tahmid Ahmed.jpg" alt="Tahmid Ahmed" />
+                          </div>
+                          <div class="textBx">
+                            <h2>Tahmid Ahmed</h2>
+                            <a href="https://www.youtube.com/@tahmidahmed-yt"><img src="src/img/Credits/People/youtube-color-svgrepo-com.png" alt="Youtube" /></a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
-                  <div class="content-credit">
-                    <div id="content1" class="contentBx img-active">
-                      <div class="credit-card">
-                        <div class="imgBx">
-                          <img src="src/img/Credits/FotoDiri.webp" alt="Kevin Falah" />
-                        </div>
-                        <div class="textBx">
-                          <h2>Kevin Falah</h2>
-                          <a href="https://kevin-falah.vercel.app/"
-                            ><div class="container-imgHover">
-                              <img src="src/img/Credits/vercel-black.png" alt="Kevin Falah Vercel" id="img-black" /><img
-                                src="src/img/Credits/vercel-gray.png"
-                                alt="Kevin Falah Vercel"
-                                id="img-gray"
-                              /></div
-                          ></a>
-                        </div>
+                  <!-- Credit Tech -->
+                  <div class="container-credit cont-credit-tech hidden">
+                    <div class="icon-credit">
+                      <div class="imgBx img-active content1-tech-class" style="--credit: 1" data-id="content1-tech">
+                        <img src="src/img/Credits/Tech/animate-on-scroll-aos.jpg" alt="AOS" />
+                      </div>
+                      <div class="imgBx" style="--credit: 2" data-id="content2-tech">
+                        <img src="src/img/Credits/Tech/cdnjs.png" alt="cdnjs" />
+                      </div>
+                      <div class="imgBx" style="--credit: 3" data-id="content3-tech">
+                        <img src="src/img/Credits/Tech/css3-svgrepo-com.png" alt="CSS" />
+                      </div>
+                      <div class="imgBx" style="--credit: 4" data-id="content4-tech">
+                        <img src="src/img/Credits/Tech/GSAP.jpg" alt="GSAP" />
+                      </div>
+                      <div class="imgBx" style="--credit: 5" data-id="content5-tech">
+                        <img src="src/img/Credits/Tech/html5-svgrepo-com.png" alt="HTML" />
+                      </div>
+                      <div class="imgBx" style="--credit: 6" data-id="content6-tech">
+                        <img src="src/img/Credits/Tech/Ionicon.jpg" alt="IonIcon" />
+                      </div>
+                      <div class="imgBx" style="--credit: 7" data-id="content7-tech">
+                        <img src="src/img/Credits/Tech/javascript-svgrepo-com.png" alt="Javascript" />
+                      </div>
+                      <div class="imgBx" style="--credit: 8" data-id="content8-tech">
+                        <img src="src/img/Credits/Tech/jquery-svgrepo-com.png" alt="JQuery" />
+                      </div>
+                      <div class="imgBx" style="--credit: 9" data-id="content9-tech">
+                        <img src="src/img/Credits/Tech/particlesjs-og.png" alt="Particle JS" />
+                      </div>
+                      <div class="imgBx" style="--credit: 10" data-id="content10-tech">
+                        <img src="src/img/Credits/Tech/SVG Repo.png" alt="SVG Repo" />
+                      </div>
+                      <div class="imgBx" style="--credit: 11" data-id="content11-tech">
+                        <img src="src/img/Credits/Tech/Sweet alert2.png" alt="Sweet Alert 2" />
+                      </div>
+                      <div class="imgBx" style="--credit: 12" data-id="content12-tech">
+                        <img src="src/img/Credits/Tech/tailwind-svgrepo-com.png" alt="Tailwind CSS" />
+                      </div>
+                      <div class="imgBx" style="--credit: 13" data-id="content13-tech">
+                        <img src="src/img/Credits/Tech/vanilla-tilt.jpg" alt="Tilt JS" />
                       </div>
                     </div>
 
-                    <div id="content2" class="contentBx">
-                      <div class="credit-card">
-                        <div class="imgBx">
-                          <img src="src/img/Credits/Coding Nepal.jpg" alt="Coding Nepal" />
+                    <div class="content-credit">
+                      <div id="content1-tech" class="contentBx img-active">
+                        <div class="credit-card">
+                          <div class="imgBx">
+                            <img src="src/img/Credits/Tech/animate-on-scroll-aos.jpg" alt="AOS" />
+                          </div>
+                          <div class="textBx">
+                            <h2>AOS</h2>
+                            <a href="https://michalsnik.github.io/aos/"><img src="src/img/Credits/Tech/link-alt-1-svgrepo-com.png" alt="AOS Link" /></a>
+                          </div>
                         </div>
-                        <div class="textBx">
-                          <h2>Coding Nepal</h2>
-                          <a href="https://www.youtube.com/@CodingNepal"><img src="src/img/Credits/youtube-color-svgrepo-com.png" alt="Youtube Link" /></a>
+                      </div>
+
+                      <div id="content2-tech" class="contentBx">
+                        <div class="credit-card">
+                          <div class="imgBx">
+                            <img src="src/img/Credits/Tech/cdnjs.png" alt="cdnjs" />
+                          </div>
+                          <div class="textBx">
+                            <h2>cdnjs</h2>
+                            <a href="https://cdnjs.com/"><img src="src/img/Credits/Tech/link-alt-1-svgrepo-com.png" alt="cdnjs Link" /></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="content3-tech" class="contentBx">
+                        <div class="credit-card">
+                          <div class="imgBx">
+                            <img src="src/img/Credits/Tech/css3-svgrepo-com.png" alt="CSS" />
+                          </div>
+                          <div class="textBx">
+                            <h2>CSS</h2>
+                            <a href="https://www.w3.org/Style/CSS/Overview.en.html"><img src="src/img/Credits/Tech/link-alt-1-svgrepo-com.png" alt="CSS Link" /></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="content4-tech" class="contentBx">
+                        <div class="credit-card">
+                          <div class="imgBx">
+                            <img src="src/img/Credits/Tech/GSAP.jpg" alt="GSAP" />
+                          </div>
+                          <div class="textBx">
+                            <h2>GSAP</h2>
+                            <a href="https://gsap.com/"><img src="src/img/Credits/Tech/link-alt-1-svgrepo-com.png" alt="GSAP Link" /></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="content5-tech" class="contentBx">
+                        <div class="credit-card">
+                          <div class="imgBx">
+                            <img src="src/img/Credits/Tech/html5-svgrepo-com.png" alt="HTML" />
+                          </div>
+                          <div class="textBx">
+                            <h2>HTML</h2>
+                            <a href="https://html.spec.whatwg.org/"><img src="src/img/Credits/Tech/link-alt-1-svgrepo-com.png" alt="HTML Link" /></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="content6-tech" class="contentBx">
+                        <div class="credit-card">
+                          <div class="imgBx">
+                            <img src="src/img/Credits/Tech/Ionicon.jpg" alt="Ionicon" />
+                          </div>
+                          <div class="textBx">
+                            <h2>Ionicon</h2>
+                            <a href="https://ionic.io/ionicons"><img src="src/img/Credits/Tech/link-alt-1-svgrepo-com.png" alt="Ionicon Link" /></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="content7-tech" class="contentBx">
+                        <div class="credit-card">
+                          <div class="imgBx">
+                            <img src="src/img/Credits/Tech/javascript-svgrepo-com.png" alt="JavaScript" />
+                          </div>
+                          <div class="textBx">
+                            <h2>JavaScript</h2>
+                            <a href="https://www.javascript.com/"><img src="src/img/Credits/Tech/link-alt-1-svgrepo-com.png" alt="JavaScript Link" /></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="content8-tech" class="contentBx">
+                        <div class="credit-card">
+                          <div class="imgBx">
+                            <img src="src/img/Credits/Tech/jquery-svgrepo-com.png" alt="jQuery" />
+                          </div>
+                          <div class="textBx">
+                            <h2>jQuery</h2>
+                            <a href="https://jquery.com/"><img src="src/img/Credits/Tech/link-alt-1-svgrepo-com.png" alt="jQuery Link" /></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="content9-tech" class="contentBx">
+                        <div class="credit-card">
+                          <div class="imgBx">
+                            <img src="src/img/Credits/Tech/particlesjs-og.png" alt="Particle JS" />
+                          </div>
+                          <div class="textBx">
+                            <h2>Particle JS</h2>
+                            <a href="https://vincentgarreau.com/particles.js/"><img src="src/img/Credits/Tech/link-alt-1-svgrepo-com.png" alt="Particle JS Link" /></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="content10-tech" class="contentBx">
+                        <div class="credit-card">
+                          <div class="imgBx">
+                            <img src="src/img/Credits/Tech/SVG Repo.png" alt="SVG Repo" />
+                          </div>
+                          <div class="textBx">
+                            <h2>SVG Repo</h2>
+                            <a href="https://www.svgrepo.com/"><img src="src/img/Credits/Tech/link-alt-1-svgrepo-com.png" alt="SVG Repo Link" /></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="content11-tech" class="contentBx">
+                        <div class="credit-card">
+                          <div class="imgBx">
+                            <img src="src/img/Credits/Tech/Sweet alert2.png" alt="Sweet Alert2" />
+                          </div>
+                          <div class="textBx">
+                            <h2>Sweet Alert2</h2>
+                            <a href="https://sweetalert2.github.io/"><img src="src/img/Credits/Tech/link-alt-1-svgrepo-com.png" alt="Sweet Alert2 Link" /></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="content12-tech" class="contentBx">
+                        <div class="credit-card">
+                          <div class="imgBx">
+                            <img src="src/img/Credits/Tech/tailwind-svgrepo-com.png" alt="Tailwind CSS" />
+                          </div>
+                          <div class="textBx">
+                            <h2>Tailwind CSS</h2>
+                            <a href="https://tailwindcss.com/"><img src="src/img/Credits/Tech/link-alt-1-svgrepo-com.png" alt="Tailwind CSS Link" /></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="content13-tech" class="contentBx">
+                        <div class="credit-card">
+                          <div class="imgBx">
+                            <img src="src/img/Credits/Tech/vanilla-tilt.jpg" alt="Tilt JS" />
+                          </div>
+                          <div class="textBx">
+                            <h2>Tilt JS</h2>
+                            <a href="https://micku7zu.github.io/vanilla-tilt.js/"><img src="src/img/Credits/Tech/link-alt-1-svgrepo-com.png" alt="Tilt JS Link" /></a>
+                          </div>
                         </div>
                       </div>
                     </div>
-
-                    <div id="content3" class="contentBx">
-                      <div class="credit-card">
-                        <div class="imgBx">
-                          <img src="src/img/Credits/Greatstackdev.jpg" alt="Great Stack Dev" />
-                        </div>
-                        <div class="textBx">
-                          <h2>Great Stack Dev</h2>
-                          <a href="https://www.youtube.com/@GreatStackDev"><img src="src/img/Credits/youtube-color-svgrepo-com.png" alt="Youtube" /></a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div id="content4" class="contentBx">
-                      <div class="credit-card">
-                        <div class="imgBx">
-                          <img src="src/img/Credits/jamie wilson.png" alt="Jamie Wilson" alt="Jamie Wilson" />
-                        </div>
-                        <div class="textBx">
-                          <h2>Jamie Wilson</h2>
-                          <a href="https://github.com/jamiewilson"
-                            ><div class="container-imgHover">
-                              <img src="src/img/Credits/github-black.png" alt="Jamie Wilson Github" id="img-black" /><img
-                                src="src/img/Credits/github-gray.png"
-                                alt="Jamie Wilson Github"
-                                id="img-gray"
-                              /></div
-                          ></a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div id="content5" class="contentBx">
-                      <div class="credit-card">
-                        <div class="imgBx">
-                          <img src="src/img/Credits/Javascript Mastery.jpg" alt="Javascript Mastery" />
-                        </div>
-                        <div class="textBx">
-                          <h2>Javascript Mastery</h2>
-                          <a href="https://www.youtube.com/@javascriptmastery"><img src="src/img/Credits/youtube-color-svgrepo-com.png" alt="Youtube" /></a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div id="content6" class="contentBx">
-                      <div class="credit-card">
-                        <div class="imgBx">
-                          <img src="src/img/Credits/Lundev.jpg" alt="Lun Dev" />
-                        </div>
-                        <div class="textBx">
-                          <h2>Lun Dev</h2>
-                          <a href="https://www.youtube.com/@lundeveloper"><img src="src/img/Credits/youtube-color-svgrepo-com.png" alt="Youtube" /></a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div id="content7" class="contentBx">
-                      <div class="credit-card">
-                        <div class="imgBx">
-                          <img src="src/img/Credits/Online Tutorial.jpg" alt="Online Tutorial" />
-                        </div>
-                        <div class="textBx">
-                          <h2>Online Tutorial</h2>
-                          <a href="https://www.youtube.com/@OnlineTutorialsYT"><img src="src/img/Credits/youtube-color-svgrepo-com.png" alt="Youtube" /></a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div id="content8" class="contentBx">
-                      <div class="credit-card">
-                        <div class="imgBx">
-                          <img src="src/img/Credits/Shandika.jpg" alt="Sandhika Galih" />
-                        </div>
-                        <div class="textBx">
-                          <h2>Sandhika Galih</h2>
-                          <a href="https://www.youtube.com/@sandhikagalihWPU"><img src="src/img/Credits/youtube-color-svgrepo-com.png" alt="Youtube" /></a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div id="content9" class="contentBx">
-                      <div class="credit-card">
-                        <div class="imgBx">
-                          <img src="src/img/Credits/Tahmid Ahmed.jpg" alt="Tahmid Ahmed" />
-                        </div>
-                        <div class="textBx">
-                          <h2>Tahmid Ahmed</h2>
-                          <a href="https://www.youtube.com/@tahmidahmed-yt"><img src="src/img/Credits/youtube-color-svgrepo-com.png" alt="Youtube" /></a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- <div id="content2" class="contentBx">
-                      <div class="credit-card">
-                        <div class="imgBx">
-                          <img src="src/img/Credits/html-5-svgrepo-com.png" alt="" />
-                        </div>
-                        <div class="textBx">
-                          <h2>Someone Famous <br /><span>Product Designer</span></h2>
-                          <ul class="sci">
-                            <li>
-                              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                            </li>
-                            <li>
-                              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                            </li>
-                            <li>
-                              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                            </li>
-                            <li>
-                              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div id="content3" class="contentBx">
-                      <div class="credit-card">
-                        <div class="imgBx">
-                          <img src="src/img/Credits/tailwind-svgrepo-com.png" alt="" />
-                        </div>
-                        <div class="textBx">
-                          <h2>Someone Famous <br /><span>Product Designer</span></h2>
-                          <ul class="sci">
-                            <li>
-                              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                            </li>
-                            <li>
-                              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                            </li>
-                            <li>
-                              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                            </li>
-                            <li>
-                              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div id="content4" class="contentBx">
-                      <div class="credit-card">
-                        <div class="imgBx">
-                          <img src="src/img/Credits/vercel-fill-svgrepo-com.png" alt="" />
-                        </div>
-                        <div class="textBx">
-                          <h2>Someone Famous <br /><span>Product Designer</span></h2>
-                          <ul class="sci">
-                            <li>
-                              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                            </li>
-                            <li>
-                              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                            </li>
-                            <li>
-                              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                            </li>
-                            <li>
-                              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div id="content5" class="contentBx">
-                      <div class="credit-card">
-                        <div class="imgBx">
-                          <img src="src/img/Credits/youtube-color-svgrepo-com.png" alt="" />
-                        </div>
-                        <div class="textBx">
-                          <h2>Someone Famous <br /><span>Product Designer</span></h2>
-                          <ul class="sci">
-                            <li>
-                              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                            </li>
-                            <li>
-                              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                            </li>
-                            <li>
-                              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                            </li>
-                            <li>
-                              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div> -->
                   </div>
                 </div>
               </div>
@@ -1119,9 +1234,6 @@
       </div>
     </main>
 
-    <!-- Javascript -->
-    <script src="src/js/script.js"></script>
-
     <!-- Ion Icon Sript Start -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -1263,5 +1375,19 @@
       });
     </script>
     <!-- Contact script jamiewilson End -->
+
+    <!-- Particles Js Start -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"
+      integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="src/js/particles-light.js"></script>
+    <script src="src/js/particles-dark.js"></script>
+    <!-- Particles Js End -->
+
+    <!-- Javascript -->
+    <script src="src/js/script.js"></script>
   </body>
 </html>

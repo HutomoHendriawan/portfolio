@@ -719,12 +719,20 @@ main aside .social-media ul {
 /* ! Project Section End */
 
 /* !Credits Section */
+/* !Credits Section */
 /* #credits {
   @apply box-border flex justify-center items-center min-h-screen bg-[#222];
 } */
 
+.credit-container .btn-credit {
+  @apply h-14 lg:h-20 w-[90px] lg:w-[140px] bg-light3 dark:bg-dark3 text-light1 dark:text-dark1 text-xs lg:text-lg cursor-pointer m-2 lg:m-4 text-center flex items-center justify-around rounded-md shadow dark:shadow-light3 shadow-dark3 transition-all ease-in-out font-black;
+}
+.credit-container .btn-credit.active {
+  @apply bg-transparent text-dark1 dark:text-light1 transition-all ease-in-out text-xs lg:text-base font-semibold border-2 lg:border-4 border-solid border-light3 dark:border-dark3 scale-95 shadow-none;
+}
+
 .container-credit {
-  @apply relative w-[450px] h-[450px] lg:w-[600px] lg:h-[600px] border-4 border-solid border-light2 dark:border-dark2 rounded-[50%] mx-5;
+  @apply relative w-[300px] max-w-full h-[300px] lg:w-[600px] lg:h-[600px] border-2 lg:border-4 border-solid border-light2 dark:border-dark2 rounded-[50%];
   /* position: relative;
   width: 600px;
   height: 600px;
@@ -744,8 +752,8 @@ main aside .social-media ul {
   cursor: pointer; */
 }
 
-.container-credit .icon-credit .imgBx {
-  @apply absolute w-16 h-16 lg:w-20 lg:h-20 rounded-[50%] overflow-hidden border border-solid border-light2 dark:border-dark2 z-[100] origin-[250px] lg:origin-[340px] rotate-[calc(360deg/9*var(--credit))] shadow-[0_0_0_4px_rgba(0,28,48,1),0_0_0_6px_rgba(100,204,197,1)] dark:shadow-[0_0_0_4px_rgba(146,144,195,1),0_0_0_6px_rgba(27,26,85,1)];
+.cont-credit-people .icon-credit .imgBx {
+  @apply absolute w-10 h-10 lg:w-20 lg:h-20 rounded-[50%] overflow-hidden border border-solid border-light2 dark:border-dark2 z-[100] origin-[166px] lg:origin-[340px] rotate-[calc(360deg/9*var(--credit))] shadow-[0_0_0_2px_rgba(0,28,48,1),0_0_0_3px_rgba(100,204,197,1)] dark:shadow-[0_0_0_2px_rgba(146,144,195,1),0_0_0_3px_rgba(27,26,85,1)] lg:shadow-[0_0_0_4px_rgba(0,28,48,1),0_0_0_6px_rgba(100,204,197,1)] dark:lg:shadow-[0_0_0_4px_rgba(146,144,195,1),0_0_0_6px_rgba(27,26,85,1)];
   /* position: absolute;
   width: 80px;
   height: 80px;
@@ -755,21 +763,38 @@ main aside .social-media ul {
   box-shadow:
     0 0 0 4px #222,
     0 0 0 6px #fff;
-  transform: rotate(calc(360deg / 5 * var(--credit)));
+  transform: rotate(calc(360deg / 9 * var(--credit)));
+  transform-origin: 340px;
+  z-index: 100;
+  overflow: hidden; */
+}
+
+.cont-credit-tech .icon-credit .imgBx {
+  @apply absolute w-10 h-10 lg:w-20 lg:h-20 rounded-[50%] overflow-hidden border border-solid border-light2 dark:border-dark2 z-[100] origin-[166px] lg:origin-[340px] rotate-[calc(360deg/13*var(--credit))] shadow-[0_0_0_2px_rgba(0,28,48,1),0_0_0_3px_rgba(100,204,197,1)] dark:shadow-[0_0_0_2px_rgba(146,144,195,1),0_0_0_3px_rgba(27,26,85,1)] lg:shadow-[0_0_0_4px_rgba(0,28,48,1),0_0_0_6px_rgba(100,204,197,1)] dark:lg:shadow-[0_0_0_4px_rgba(146,144,195,1),0_0_0_6px_rgba(27,26,85,1)];
+  /* position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  transition: 0.5s;
+  border: 1px solid #fff;
+  box-shadow:
+    0 0 0 4px #222,
+    0 0 0 6px #fff;
+  transform: rotate(calc(360deg / 9 * var(--credit)));
   transform-origin: 340px;
   z-index: 100;
   overflow: hidden; */
 }
 
 .container-credit .icon-credit .imgBx.img-active {
-  @apply shadow-[0_0_0_6px_rgba(0,28,48,1),0_0_0_12px_rgba(23,107,135,1)] dark:shadow-[0_0_0_6px_rgba(146,144,195,1),0_0_0_12px_rgba(83,92,145,1)]
+  @apply shadow-[0_0_0_3px_rgba(0,28,48,1),0_0_0_6px_rgba(23,107,135,1)] dark:shadow-[0_0_0_3px_rgba(146,144,195,1),0_0_0_6px_rgba(83,92,145,1)] lg:shadow-[0_0_0_6px_rgba(0,28,48,1),0_0_0_12px_rgba(23,107,135,1)] dark:lg:shadow-[0_0_0_6px_rgba(146,144,195,1),0_0_0_12px_rgba(83,92,145,1)]
   /* box-shadow:
     0 0 0 6px #222,
     0 0 0 12px red; */;
 }
 
-.container-credit .icon-credit .imgBx img {
-  @apply absolute top-0 left-0 w-full h-full object-cover rounded-[50%] grayscale rotate-[calc(-360deg/9*var(--credit))] duration-500;
+.cont-credit-people .icon-credit .imgBx img {
+  @apply absolute top-0 left-0 w-full h-full object-cover rounded-[50%] grayscale transition rotate-[calc(-360deg/9*var(--credit))] duration-500;
   /* position: absolute;
   top: 0;
   left: 0;
@@ -777,7 +802,21 @@ main aside .social-media ul {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  transform: rotate(calc(-360deg / 5 * var(--credit)));
+  transform: rotate(calc(-360deg / 9 * var(--credit)));
+  transition: 0.5s;
+  filter: grayscale(1); */
+}
+
+.cont-credit-tech .icon-credit .imgBx img {
+  @apply absolute top-0 left-0 w-full h-full object-cover rounded-[50%] grayscale transition rotate-[calc(-360deg/13*var(--credit))] duration-500;
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  transform: rotate(calc(-360deg / 9 * var(--credit)));
   transition: 0.5s;
   filter: grayscale(1); */
 }
@@ -798,7 +837,7 @@ main aside .social-media ul {
 }
 
 .content-credit::before {
-  @apply content-[''] absolute inset-[60px] border-4 border-solid border-transparent border-l-4 border-l-dark2 dark:border-l-light2 border-r-4 border-r-light2 dark:border-r-dark2 rounded-[50%] animate-[animate-credit_5s_linear_infinite] z-[1] pointer-events-none;
+  @apply content-[''] absolute inset-[30px] lg:inset-[60px] border-2 lg:border-4 border-solid border-transparent border-l-2 lg:border-l-4 border-l-dark2 dark:border-l-light2 border-r-2 lg:border-r-4 border-r-light2 dark:border-r-dark2 rounded-[50%] animate-[animate-credit_5s_linear_infinite] z-[1] pointer-events-none;
   /* content: '';
   position: absolute;
   inset: 60px;
@@ -821,7 +860,7 @@ main aside .social-media ul {
 }
 
 .content-credit::after {
-  @apply content-[''] absolute inset-[120px] border-4 border-solid border-transparent border-l-4 border-l-light3 dark:border-l-dark3 border-r-4 border-r-dark3 dark:border-r-light3 rounded-[50%] animate-[animate-credit2_2.5s_linear_infinite] z-[1] pointer-events-none;
+  @apply content-[''] absolute inset-[60px] lg:inset-[120px] border-2 lg:border-4 border-solid border-transparent border-l-2 lg:border-l-4 border-l-light3 dark:border-l-dark3 border-r-2 lg:border-r-4 border-r-dark3 dark:border-r-light3 rounded-[50%] animate-[animate-credit2_2.5s_linear_infinite] z-[1] pointer-events-none;
   /* content: '';
   position: absolute;
   inset: 120px;
@@ -872,7 +911,7 @@ main aside .social-media ul {
 }
 
 .contentBx .credit-card .imgBx {
-  @apply relative w-[150px] h-[150px] rounded-[10px] overflow-hidden;
+  @apply relative w-[75px] h-[75px] lg:w-[150px] lg:h-[150px] rounded-[10px] overflow-hidden;
   /* position: relative;
   width: 150px;
   height: 150px;
@@ -899,7 +938,7 @@ main aside .social-media ul {
 }
 
 .contentBx .credit-card .textBx h2 {
-  @apply relative text-[1.25em] font-semibold text-dark1 dark:text-light1 leading-[1em] uppercase text-center;
+  @apply relative text-[0.625em] lg:text-[1.25em] font-semibold text-dark1 dark:text-light1 leading-[0.5em] lg:leading-[1em] uppercase text-center;
   /* position: relative;
   font-size: 1.25em;
   font-weight: 600;
@@ -917,8 +956,12 @@ main aside .social-media ul {
   letter-spacing: 0.1em;
 } */
 
+.contentBx .credit-card .textBx ul {
+  @apply relative flex gap-2 bg-blue-500;
+}
+
 .contentBx .credit-card .textBx a {
-  @apply relative flex gap-2 mt-[10px];
+  @apply relative flex flex-row flex-wrap gap-1 lg:gap-2 mt-[5px] lg:mt-[10px];
   /* position: relative;
   display: flex;
   gap: 7px;
@@ -930,7 +973,7 @@ main aside .social-media ul {
 } */
 
 .contentBx .credit-card .textBx img {
-  @apply relative w-[30px] h-[30px] flex justify-center items-center rounded-md ease-in-out duration-500 grayscale;
+  @apply relative w-[15px] lg:w-[30px] h-[15px] lg:h-[30px] flex justify-center items-center rounded-md ease-in-out duration-500 grayscale;
   /* position: relative;
   width: 30px;
   height: 30px;
@@ -950,7 +993,7 @@ main aside .social-media ul {
 }
 
 .contentBx .credit-card .textBx .container-imgHover {
-  @apply relative w-[30px] h-[30px];
+  @apply relative w-[15px] lg:w-[30px] h-[15px] lg:h-[30px];
 }
 
 .contentBx .credit-card .textBx .container-imgHover img {

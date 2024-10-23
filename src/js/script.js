@@ -98,3 +98,80 @@ if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.match
 //   let formData = new FormData(form); // creating new FormData obj. This obj used to send form data
 //   xhr.send(formData); // Sending form data
 // };
+
+//  ! Script Credit Section Start
+$(document).ready(function () {
+  $('.btn-credit').click(function () {
+    $(this).addClass('active').siblings().removeClass('active');
+  });
+});
+const btnPeople = document.getElementById('credit-people');
+const btnTech = document.getElementById('credit-tech');
+const containers = {
+  people: document.querySelector('.cont-credit-people'),
+  tech: document.querySelector('.cont-credit-tech'),
+};
+const content = {
+  people: {
+    main: document.getElementById('content1'),
+    icon: document.querySelector('.content1-people-class'),
+  },
+  tech: {
+    main: document.getElementById('content1-tech'),
+    icon: document.querySelector('.content1-tech-class'),
+  },
+};
+const allCreditImgBox = document.querySelectorAll('.icon-credit .imgBx');
+const allCreditContentBox = document.querySelectorAll('.content-credit .contentBx');
+
+const showSection = (type) => {
+  const otherType = type === 'people' ? 'tech' : 'people';
+
+  containers[otherType].classList.add('hidden');
+  containers[type].classList.remove('hidden');
+
+  allCreditContentBox.forEach((el) => el.classList.remove('img-active'));
+  allCreditImgBox.forEach((el) => el.classList.remove('img-active'));
+
+  content[type].main.classList.add('img-active');
+  content[type].icon.classList.add('img-active');
+};
+
+btnPeople.addEventListener('click', () => showSection('people'));
+btnTech.addEventListener('click', () => showSection('tech'));
+
+let imgBx = document.querySelectorAll('.imgBx');
+let contentBx = document.querySelectorAll('.contentBx');
+
+for (let i = 0; i < imgBx.length; i++) {
+  imgBx[i].addEventListener('click', function () {
+    for (let i = 0; i < contentBx.length; i++) {
+      contentBx[i].className = 'contentBx';
+    }
+    document.getElementById(this.dataset.id).className = 'contentBx img-active';
+
+    for (let i = 0; i < imgBx.length; i++) {
+      imgBx[i].className = 'imgBx';
+    }
+    this.className = 'imgBx img-active';
+  });
+}
+//  ! Script Credit Section End
+
+// ! Script Particles Js
+const darkTheme = document.getElementById('starParticles');
+const lightTheme = document.getElementById('snowParticles');
+const containersTheme = {
+  dark: (localStorage.theme = 'dark'),
+  light: (localStorage.theme = 'light'),
+};
+
+const showTheme = (type) => {
+  const otherType = type === 'dark' ? 'light' : 'dark';
+
+  containers[otherType].classList.add('hidden');
+  containers[type].classList.remove('hidden');
+};
+
+darkTheme.addEventListener('click', () => showTheme('dark'));
+lightTheme.addEventListener('click', () => showTheme('light'));
